@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành DOM cơ bản</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .new-class {
+        color: green;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">Chào mừng đến với trang web của tôi!</h1>
+    <p class="intro">Đây là một đoạn văn giới thiệu ngắn gọn về trang web.</p>
+    <p id="text-content">Nội dung ban đầu của đoạn văn này sẽ được thay đổi.</p>
+    <button id="toggleListBtn" onclick="toggleList()">Hide</button>
+    <ul id="list">
+      <li>Học HTML</li>
+      <li>Học CSS</li>
+      <li>Học JavaScript</li>
+    </ul>
+    <input type="text" id="newItemText" placeholder="Nhập nội dung mục mới" />
+    <button onclick="addListItem()">Add</button>
+    <button onclick="removeLastItem()">Remove</button>
+
+    <script>
+      function addListItem() {
+        const newItemText = document.querySelector("#newItemText").value.trim();
+        if (newItemText === "") {
+          alert("Vui lòng nhập nội dung mới.");
+          return;
+        }
+
+        const list = document.querySelector("#list");
+        const newItem = document.createElement("li");
+        newItem.textContent = newItemText;
+        list.appendChild(newItem);
+
+        document.querySelector("#newItemText").value = "";
+      }
+
+      function removeLastItem() {
+        const list = document.querySelector("#list");
+        const lastItem = list.lastElementChild;
+        if (lastItem) {
+          list.removeChild(lastItem);
+        }
+      }
+
+      function toggleList() {
+        const list = document.querySelector("#list");
+        const toggleBtn = document.querySelector("#toggleListBtn");
+        if (list.style.display === "none") {
+          list.style.display = "block";
+          toggleBtn.textContent = "Hide";
+        } else {
+          list.style.display = "none";
+          toggleBtn.textContent = "Show";
+        }
+      }
+    </script>
+  </body>
+</html>

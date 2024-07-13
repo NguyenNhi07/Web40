@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Breeds list</h1>
+
+    <div class="breed-list">
+      <div class="loading">Loading...</div>
+      <div class="breed-selector hidden">
+        <select name="breed" id="breed">
+          <option>Select Breeds</option>
+        </select>
+        <button id="get-sub-breed">Get sub Breeds</button>
+      </div>
+
+      <h2>Sub breeds</h2>
+      <ul class="sub-breed-list">
+        <p>Select a breed</p>
+      </ul>
+
+      <div class="images-container hidden">
+        <h2>Random Image</h2>
+        <div class="images-list"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

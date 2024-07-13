@@ -1,0 +1,42 @@
+.heart {
+    position: relative;
+    transform: rotate(45deg);
+    margin-top: 300px;
+    margin-left: 300px;
+    animation: heartbeat 1s infinite;
+}
+
+.heart, .circle, .square {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle-left {
+    transform: translateX(-50%);
+}
+
+.circle-top {
+    transform: translateY(-50%);
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    20%, 60% {
+        transform: rotate(45deg) scale(1.5);
+    }
+
+    30%, 70% {
+        transform: rotate(45deg) scale(0.9);
+    }
+}

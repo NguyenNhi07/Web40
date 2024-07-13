@@ -1,0 +1,94 @@
+body {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #1c1d1d;
+    font-style: normal;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.view-all {
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: 0.425px;
+    color: #1c1d1d;
+    text-decoration: none;
+}
+
+.card-link {
+    color: #1c1d1d;
+    text-decoration: none;
+}
+
+.card-body {
+    padding: 9px 0 6px 0;
+}
+
+.card-title {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.425;
+    font-weight: 400;
+}
+
+.card-thumbnail {
+    max-width: 100%;
+}
+
+.review {
+    gap: 5px;
+    margin-bottom: 6px;
+}
+
+.stars {
+    color: #fcbc2c;
+    font-size: 17px;
+    line-height: 1.5;
+    gap: 1px;
+}
+
+.price {
+    text-decoration: line-through;
+    font-size: 15px;
+    line-height: 1.5;
+    gap: 10px;
+    margin-bottom: 9px;
+}
+
+.origin {
+    letter-spacing: 0.425px;
+}
+
+.variants-list {
+    gap: 8px;
+}
+
+.variants {
+    padding: 2px;
+    border: 2px solid #e8e8e1
+}
+
+.variants-thumnail {
+    width: 17px;
+    height: 17px;
+    max-width: 100%;
+}
+
+.card {
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}

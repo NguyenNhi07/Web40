@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <h1 class="title">Đếm số</h1>
+      <h1 id="counter" style="color: #333333">0</h1>
+      <div class="btn-container">
+        <button class="btn counterBtn prevBtn" onclick="decreaseCounter()">
+          Trừ
+        </button>
+        <button class="btn counterBtn nextBtn" onclick="increaseCounter()">
+          Cộng
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const counterElement = document.querySelector("#counter");
+
+      function increaseCounter() {
+        let currentValue = parseInt(counterElement.textContent);
+        currentValue++;
+        counterElement.textContent = currentValue;
+        updateCounterColor(currentValue);
+      }
+
+      function decreaseCounter() {
+        let currentValue = parseInt(counterElement.textContent);
+        currentValue--;
+        counterElement.textContent = currentValue;
+        updateCounterColor(currentValue);
+      }
+
+      function updateCounterColor(value) {
+        if (value > 0) {
+          counterElement.style.color = "green";
+        } else if (value < 0) {
+          counterElement.style.color = "red";
+        } else {
+          counterElement.style.color = "#333333";
+        }
+      }
+    </script>
+  </body>
+</html>

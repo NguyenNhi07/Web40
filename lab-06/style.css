@@ -1,0 +1,68 @@
+html {
+    --container-size: 1440px;
+    --container-padding: 0px
+}
+
+.row {
+    --row-gutter: 20px;
+}
+
+body {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(237, 174, 202, 1) 14%, rgba(148, 187, 233, 1) 76%);
+}
+
+.box {
+    background-color: greenyellow;
+    width: 100px;
+    height: 100px;
+    /* transform: bien doi: 
+    - y = -10: dich len tren 
+    - rotate: 10deg: 10 do -> xoay theo truc z (huong mat nhin) 
+    - scale: 0.5 -> thu nho | scale: 1.5 -> lon len
+    */
+    /* transform: translateY(-10px) rotate(45deg) scale(1.5); */
+
+    /* transition: cần tác động của người dùng */
+    /* dat ngoai hover */
+    /* transition: all 0.5s ease-in-out; */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* animation */
+    animation: fly 2s infinite;
+}
+
+/* .box:hover {
+    transform: translateY(-10px) rotate(45deg) scale(1.5);
+} */
+
+/* animation: tự động chạy */
+@keyframes fly {
+    /* vòng lặp */
+    0%, 100% {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        top: 0;
+        left: calc(100% - 100px);
+        transform: rotate(360deg);
+    }
+
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        transform: rotate(720deg);
+    }
+
+    75% {
+        top: calc(100% - 100px);
+        left: 0;
+        transform: rotate(360deg);
+    }
+}

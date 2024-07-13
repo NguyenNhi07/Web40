@@ -1,0 +1,788 @@
+/* navbar */
+.container {
+    width: 100%;
+}
+
+.navbar {
+    background-color: #fff;
+    width: 100%;
+    gap: 20px;
+    height: 64px;
+}
+
+.logo {
+    height: min-content;
+    width: min-content;
+    padding: 10px 0 10px 10px;
+}
+
+.logo-img {
+    object-fit: fill;
+    height: 24px;
+    width: 26px;
+}
+
+.navbar-selector {
+    gap: 20px;
+    height: min-content;
+    width: min-content;
+}
+
+.features {
+    height: auto;
+    width: auto;
+}
+
+.navbar-describe {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 2em;
+    text-align: center;
+    color: #666666;
+}
+
+/* heading */
+.header {
+    gap: 20px;
+    height: 600px;
+    width: 100%;
+    padding: 60px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.background-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.background-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-header {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+}
+
+.title-header {
+    width: 390px;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+.title {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.select-button {
+    height: min-content;
+    width: min-content;
+    gap: 15px;
+    z-index: 1;
+}
+
+.button-white {
+    position: relative;
+    gap: 10px;
+    height: 40px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    flex: none;
+}
+
+.start-button .more-button {
+    position: relative;
+    height: auto;
+    width: auto;
+    flex: none;
+}
+
+.more-button {
+    position: relative;
+    height: auto;
+    width: auto;
+    flex: none;
+}
+
+.content-start {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 16.8px;
+    margin: 0;
+    padding: 0;
+}   
+
+.button-rgb {
+    position: relative;
+    gap: 10px;
+    height: 40px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff40;
+    flex: none;
+}
+
+.content-more {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 16.8px;
+    margin: 0;
+    padding: 0;
+}
+
+.noname {
+    background-color: #00000080;
+    flex: none;
+    /* không có lề biên */
+    inset: 0; 
+    overflow: hidden;
+    position: absolute;
+}
+
+/* courses */
+.courses {
+    position: relative;
+    background-color: #fff;
+    flex: none;
+    gap: 10px;
+    height: min-content;
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 0 100px 0;
+}
+
+.courses-list {
+    background-color: #fff;
+    gap: 100px;
+    max-width: 1000px;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    width: 1px;
+    flex-grow: 1;
+}
+
+.first-courses {
+    position: relative;
+    gap: 80px;
+    flex: none;
+    width: 100%;
+    height: min-content;
+    overflow: visible;
+}
+
+.courses-img__first {
+    aspect-ratio: 1.2 / 1;
+    border-radius: 20px;
+    flex-grow: 1;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 388px;
+    width: 1px;
+}
+
+
+.img-course__figma {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.figma {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.courses-content__first  {
+    flex-grow: 1;
+    gap: 20px;
+    position: relative;
+    height: auto;
+    width: 1px;
+}
+
+.courses-header__figma {
+    flex: none;
+    outline: none;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    width: 380px;
+}
+
+.courses-header__content--figma {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: rgb(51, 51, 51);
+}
+
+.courses-describe__figma {
+    outline: none;
+    flex: none;
+    overflow: visible;
+    position: relative;
+    width: 380px;
+}
+
+.courses-describe__content--figma {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #888888;
+    line-height: 1.5em;
+}
+
+.courses-button__figma  {
+    height: min-content;
+    width: min-content;
+    gap: 15px;
+    flex: none; 
+    overflow: visible;
+    position: relative;
+    outline: none;
+}
+
+.button-black {
+    position: relative;
+    gap: 10px;
+    height: 40px;
+    width: auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #222;
+    flex: none;
+    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026,
+        0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,
+        0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,
+        0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,
+        0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,
+        0 30px 30px -3.75px #0000000d;
+    overflow: visible;
+}
+
+.button-black__start {
+    position: relative;
+    height: auto;
+    width: auto;
+    outline: none;
+    flex: none;
+}
+
+.content-black__start {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button-gray {
+    position: relative;
+    gap: 10px;
+    height: 40px;
+    width: auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ebebeb;
+    flex: none;
+    overflow: visible;
+}
+
+.button-gray__more {
+    position: relative;
+    height: auto;
+    width: auto;
+    outline: none;
+    flex: none;
+}
+
+.content-gray__more {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.secound-courses {
+    position: relative;
+    gap: 80px;
+    flex: none;
+    width: 100%;
+    height: min-content;
+    overflow: visible;
+}
+
+.courses-content__secound {
+    flex-grow: 1;
+    gap: 20px;
+    position: relative;
+    height: auto;
+    width: 1px;
+}
+
+.courses-header {
+    flex: none;
+    outline: none;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    width: 380px;
+}
+
+.courses-header__content {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: rgb(51, 51, 51);
+}
+
+.courses-describe {
+    outline: none;
+    flex: none;
+    overflow: visible;
+    position: relative;
+    width: 380px;
+}
+
+.courses-describe__content {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #888888;
+    line-height: 1.5em;
+}
+
+.courses-button__templates {
+    height: min-content;
+    width: min-content;
+    gap: 15px;
+    flex: none;
+}
+
+.courses-img__secound {
+    aspect-ratio: 1.2 / 1;
+    border-radius: 20px;
+    flex-grow: 1;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 388px;
+    width: 1px;
+}
+
+.img-course__templates {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.templates {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* End */
+.thend {
+    padding: 100px;
+    position: relative;
+    height: min-content;
+    width: 100%;
+    overflow: hidden;
+}
+
+.thend-items {
+    max-width: 1000px;
+    gap: 60px;
+}
+
+.first {
+    align-self: flex-start;
+    gap: 30px;
+    height: auto;
+    /* width: 100%; */
+    justify-self: start;
+    overflow: visible;
+    position: relative;
+}   
+
+.first-background {
+    border-radius: 20px;
+    flex: none;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.first-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-plugins {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first-content {
+    flex: none;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.header-plugins {
+    outline: none;
+    flex: none;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.plugins-h2 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    line-height: 1.5em;
+    color: rgb(51, 51, 51);
+}
+
+.header-content__plugins {
+    outline: none;
+    flex: none;
+    overflow: visible;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.plugins-h3 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.4em;
+    color: rgb(136, 136, 136);
+}
+
+.secound {
+    align-self: flex-start;
+    justify-self: start;
+    gap: 30px;
+    height: auto;
+    /* width: 100%; */
+    overflow: visible;
+    position: relative;
+}
+
+.secound-background {
+    border-radius: 20px;
+    flex: none;
+    gap: 20px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.secound-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-powerful {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.secound-content {
+    flex: none;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.header-powerful {
+    flex: none;
+    overflow: visible;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.powerful-h2 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.8px;
+    line-height: 1.5em;
+    color: rgb(51, 51, 51);
+}
+
+.header-content__powerful {
+    outline: none;
+    flex: none;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.powerful-h3 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.4em;
+    color: rgb(136, 136, 136);
+}
+
+.first-secound {
+    max-width: 1000px;
+    position: relative;
+    gap: 60px;
+} 
+
+.third-four {
+    max-width: 1000px;
+    position: relative;
+    gap: 60px;
+}
+
+.third {
+    align-self: flex-start;
+    justify-self: start;
+    gap: 30px;
+    height: auto;
+    /* width: 100%; */
+    position: relative;
+    overflow: visible;
+}
+
+.third-background {
+    border-radius: 20px;
+    flex: none;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.third-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-design {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.third-content {
+    gap: 10px;
+    flex: none;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.header-design {
+    flex: none;
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.design-h2 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    line-height: 1.5em;
+    color: rgb(51, 51, 51);
+}
+
+.header-content__design {
+    flex: none;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.design-h3 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.4em;
+    color: rgb(136, 136, 136);
+}
+
+.four {
+    align-self: flex-start;
+    justify-self: start;
+    gap: 30px;
+    height: auto;
+    /* width: 100%; */
+    position: relative;
+    overflow: visible;
+}
+
+.four-background {
+    border-radius: 20px;
+    flex: none;
+    gap: 20px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.four-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}   
+
+.img-navigation {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.four-content {
+    gap: 10px;
+    flex: none;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.header-navigation {
+    flex: none;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.navigation-h2 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    line-height: 1.5em;
+    color: rgb(51, 51, 51);
+}
+
+.header-content__navigation {
+    flex: none;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.navigation-h3 {
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.4em;
+    color: rgb(136, 136, 136);
+}   
+

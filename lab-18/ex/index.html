@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+      .circle {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+        position: fixed;
+      }
+      .square {
+        width: 30px;
+        height: 30px;
+        background-color: green;
+        position: fixed;
+      }
+      .character {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        object-fit: cover;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="circle"
+      class="character"
+      src="https://th.bing.com/th/id/R.486bca06f8278c6f410234467c3d8979?rik=GogLFaFTGBWizQ&pid=ImgRaw&r=0"
+      alt=""
+    />
+  </body>
+</html>

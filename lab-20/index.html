@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="todo.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .todo-item.completed {
+        text-decoration: line-through;
+      }
+      .todo-list {
+        list-style: none;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+      }
+      .container {
+        background-color: rgb(250, 250, 250);
+        padding: 50px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+      }
+      .contentToDoList {
+        margin-top: 20px;
+        margin-inline: 20px;
+      }
+      h1 {
+        position: relative;
+        bottom: 40px;
+        font-size: 35px;
+        line-height: 1.2rem;
+      }
+      .header-content {
+        display: flex;
+        justify-content: center;
+        color: rgb(250, 109, 132);
+      }
+      .todo-form {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+        bottom: 40px;
+      }
+      .inputNewJob {
+        height: 25px;
+        width: 290px;
+        font-size: 14px;
+        padding-inline-start: 10px;
+        border-radius: 4px;
+        border: 1px solid;
+      }
+      .addNewJobBtn {
+        width: 60px;
+        font-size: 14px;
+        border-radius: 4px;
+        background-color: rgba(22, 192, 152, 0.38);
+        border: 1px solid rgba(0, 176, 135, 1);
+        color: rgba(0, 135, 103, 1);
+        font-family: "Poppins", sans-serif;
+      }
+      .todo-filter {
+        position: relative;
+        bottom: 25px;
+      }
+      .completedJob {
+        color: rgba(0, 135, 103, 1);
+      }
+      .noCompletedJob {
+        color: rgba(223, 4, 4, 1);
+      }
+      .todo-list {
+        position: relative;
+        bottom: 25px;
+        margin-left: -39px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .btn-delete {
+        margin-right: 4px;
+        width: 60px;
+        font-size: 14px;
+        border-radius: 4px;
+        background-color: rgba(255, 197, 197, 1);
+        border: 1px solid rgba(223, 4, 4, 1);
+        color: rgba(223, 4, 4, 1);
+        font-family: "Poppins", sans-serif;
+      }
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+      }
+      .todo-content {
+        color: rgb(49, 133, 201);
+      }
+      .todo-meta {
+        position: relative;
+        bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .todo-count {
+        color: rgba(223, 4, 4, 1);
+      }
+      .todo-clear {
+        width: max-content;
+        padding: 10px 10px;
+        font-size: 14px;
+        border-radius: 4px;
+        background-color: rgba(255, 197, 197, 1);
+        border: 1px solid rgba(223, 4, 4, 1);
+        color: rgba(223, 4, 4, 1);
+        font-family: "Poppins", sans-serif;
+        margin-left: 65px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contentToDoList">
+        <div class="header-content">
+          <h1>TodoApp</h1>
+        </div>
+        <form class="todo-form">
+          <input class="inputNewJob" placeholder="Nhập nội dung công việc" />
+          <button class="addNewJobBtn" type="submit">Thêm</button>
+        </form>
+        <form class="todo-filter">
+          <!-- phải có cùng name thì mới cho phép chọn 1 trong 3 cái -->
+          <span>
+            <input type="radio" id="all" value="all" name="filter" checked />
+            <label for="all">Tất cả</label>
+          </span>
+          <span>
+            <input type="radio" id="active" name="filter" value="active" />
+            <label class="noCompletedJob" for="active">Chưa hoàn thành</label>
+          </span>
+          <span>
+            <input
+              type="radio"
+              id="completed"
+              name="filter"
+              value="completed"
+            />
+            <label class="completedJob" for="completed">Đã hoàn thành</label>
+          </span>
+        </form>
+        <ul class="todo-list"></ul>
+        <div class="todo-meta">
+          <span class="todo-status"
+            >Còn <span class="todo-count"></span> công việc cần làm</span
+          >
+          <button class="todo-clear">Xoá các công việc đã hoàn thành</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

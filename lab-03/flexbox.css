@@ -1,0 +1,60 @@
+.container {
+    /* Sắp xếp các .item trong .container */
+    display: flex;
+    height: 300px;
+    background-color: darkgrey;
+}
+
+.item {
+    width: 800px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-green {
+    background-color: rgb(105, 201, 105);
+}
+
+.bg-brown {
+    background-color: rgb(153, 103, 103);
+}
+
+.bg-yellow {
+    background-color: rgb(233, 233, 128);
+}
+.bg-red {
+    background-color: rgb(255, 124, 124);
+} 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành DOM cơ bản</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .new-class {
+        color: green;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">Chào mừng đến với trang web của tôi!</h1>
+    <p class="intro">Đây là một đoạn văn giới thiệu ngắn gọn về trang web.</p>
+    <p id="text-content">Nội dung ban đầu của đoạn văn này sẽ được thay đổi.</p>
+    <ul id="list">
+      <li>Học HTML</li>
+      <li>Học CSS</li>
+      <li>Học JavaScript</li>
+    </ul>
+    <button onclick="changeContent()">Thay đổi nội dung</button>
+    <button onclick="replaceText()">Thay thế văn bản</button>
+    <button onclick="highlightText()">Tô màu đoạn văn</button>
+    <button onclick="addCss()">Thêm CSS cho tiêu đề</button>
+    <button onclick="addListItem()">Thêm mục vào danh sách</button>
+    <button onclick="removeLastItem()">
+      Xóa mục cuối cùng trong danh sách
+    </button>
+    <button onclick="toggleClass()">Bật/Tắt class cho đoạn văn</button>
+    <button onclick="countParagraphs()">Đếm số đoạn văn</button>
+    <button onclick="replaceListItems()">
+      Thay thế tất cả mục trong danh sách
+    </button>
+    <button onclick="moveTitle()">Di chuyển tiêu đề xuống cuối</button>
+
+    <script>
+      function changeContent() {
+        // Thay đổi nội dung của đoạn văn có id là text-content
+        const changeContent = document.querySelector("#text-content");
+        changeContent.textContent = "Đã được thay đổi";
+      }
+
+      function replaceText() {
+        // Thay thế nội dung của đoạn văn có class là intro
+        const replaceText = document.querySelector(".intro");
+        replaceText.textContent = "Trang web đầu tiên về DOM";
+      }
+
+      function highlightText() {
+        // Tìm tất cả các đoạn văn (<p>) và thêm class highlight vào chúng để tô màu nền.
+        const highlightText = document.querySelectorAll("p");
+        highlightText.forEach(function (item) {
+          item.classList.add("highlight");
+        });
+      }
+
+      function addCss() {
+        // Thay đổi màu chữ, kích thước và trọng lượng của tiêu đề có id là main-title.
+        const addCss = document.querySelector("#main-title");
+        addCss.style.color = "red";
+        addCss.style.fontSize = "30px";
+        addCss.style.fontWeight = "bold";
+      }
+
+      function addListItem() {
+        // Thêm một mục mới vào cuối danh sách có id là list.
+        const addListItem = document.querySelector("#list");
+        addListItem.insertAdjacentHTML("beforeend", "<li>New Item</li>");
+      }
+
+      function removeLastItem() {
+        // Xóa mục cuối cùng trong danh sách có id là list.
+        const removeLastItem = document.querySelector("#list");
+        const lastItem = removeLastItem.lastElementChild;
+        if (lastItem) {
+          removeLastItem.removeChild(lastItem);
+        }
+      }
+
+      function toggleClass() {
+        // Bật hoặc tắt class new-class cho đoạn văn có class là intro.
+        // Lấy đoạn văn có class là intro từ tài liệu HTML
+        const toggleClass = document.querySelector(".intro");
+        toggleClass.classList.contains("new-class")
+          ? toggleClass.classList.remove("new-class")
+          : toggleClass.classList.add("new-class");
+      }
+
+      function countParagraphs() {
+        // Đếm số lượng đoạn văn (<p>) trên trang và hiển thị thông báo với số lượng đó.
+        const countParagraphs = document.querySelectorAll("p");
+        alert("Số lượng đoạn văn trên trang là: " + countParagraphs.length);
+      }
+
+      function replaceListItems() {
+        // Thay thế tất cả các mục trong danh sách có id là list bằng các mục mới.
+        const replaceListItems = document.querySelector("#list");
+
+        const newItem = [
+          "<li>Item 1</li>",
+          "<li>Item 2</li>",
+          "<li>Item 3</li>",
+        ];
+
+        replaceListItems.innerHTML = newItem.join("");
+      }
+
+      function moveTitle() {
+        // Di chuyển tiêu đề có id là main-title xuống cuối trang.
+        const moveTitle = document.querySelector("#main-title");
+
+        document.body.lastElementChild.insertAdjacentElement(
+          "afterend",
+          moveTitle
+        );
+      }
+    </script>
+  </body>
+</html>

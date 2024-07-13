@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Thay đổi background tương ứng trong class "testimonials-container" -->
+    <div class="testimonials-container">
+      <i class="fas fa-quote-left"></i>
+
+      <!-- Nội dung quote hiển thị ở đây -->
+      <p class="text">Sống cho tới chết</p>
+
+      <!-- Tên tác giả hiển thị ở đây -->
+      <strong class="name">Nguyễn Nhi</strong>
+
+      <div class="authors-container">
+        <div class="author selected">
+          <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
+        </div>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="" />
+        </div>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="" />
+        </div>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="" />
+        </div>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      const user = [
+        {
+          name: "Nguyễn Nhi",
+          quote: "Sống cho tới chết",
+          image: "https://randomuser.me/api/portraits/men/41.jpg",
+          color: "red",
+        },
+        {
+          name: "Nguyễn Ba",
+          quote: "Sống nhưng chưa chết",
+          image: "https://randomuser.me/api/portraits/women/50.jpg",
+          color: "green",
+        },
+        {
+          name: "Nguyễn Nhung",
+          quote: "Cũ đi, mới mới đến",
+          image: "https://randomuser.me/api/portraits/women/22.jpg",
+          color: "yellow",
+        },
+        {
+          name: "Uyển Nhi",
+          quote: "Quá khứ của kẻ phản diện",
+          image: "https://randomuser.me/api/portraits/women/76.jpg",
+          color: "blue",
+        },
+        {
+          name: "Cute",
+          quote: "Tổn thương",
+          image: "https://randomuser.me/api/portraits/men/17.jpg",
+          color: "pink",
+        },
+      ];
+      document.addEventListener("DOMContentLoaded", function () {
+        const authors = document.querySelectorAll(".author");
+
+        authors.forEach(function (author, index) {
+          author.addEventListener("click", function () {
+            authors.forEach(function (author) {
+              author.classList.remove("selected");
+            });
+            this.classList.add("selected");
+
+            const selectedUser = user[index];
+
+            document.querySelector(".text").textContent = selectedUser.quote;
+            document.querySelector(".name").textContent = selectedUser.name;
+
+            document.querySelector(
+              ".testimonials-container"
+            ).style.backgroundColor = selectedUser.color;
+
+            const selectedImg = document.querySelector(".author.selected img");
+            selectedImg.src = selectedUser.image;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

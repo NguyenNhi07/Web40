@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --typeHeaderFallback: sans-serif;
+    --typeHeaderPrimary: "Basic Commercial Soft Rounded";
+    --typeBasePrimary: -apple-system;
+    --typeBaseFallback: BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.new-releases {
+    margin-top: 50px;
+    
+}
+
+.most-loved-items {
+    margin-top: 100px;
+}
+
+.header {
+    padding: 0 40px;
+    margin: 0 106.4px;
+}
+
+.header-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+}
+
+h2 {
+    font-weight: 700;
+    font-family: var(--typeHeaderPrimary), var(--typeHeaderFallback);
+    line-height: 43,2px;
+    font-size: 36px;
+    text-align: center;
+    color: #1c1d1d;
+    letter-spacing: 0.0em;
+}
+
+.selection-view {
+    font-family: var(--typeBasePrimary), var(--typeBaseFallback);
+    font-weight: var(--typeBaseWeight);
+    letter-spacing: 0.025em;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: var(17px);
+    padding-top: 6px;
+    float: right;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    margin: 0 106.4px;
+    
+}
+
+.product-item {
+    background-color: #fff;
+    font-family: var(--typeBasePrimary), var(--typeBaseFallback);
+    padding-left: 30px;
+}
+
+.product-link {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1d1d;
+}
+
+.product-img {
+    display: block;
+    width: 284.5px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-meta {
+    padding: 10px 0 6px 0;
+    width: 282.5px;
+}
+
+.product-name {
+    color: #1c1d1d;
+    font-size: 20.06px;
+    letter-spacing: 0.425px;
+    line-height: 30.09px;
+    text-align: left;
+    text-wrap: wrap;
+}
+
+.product-rating {
+    color: #1c1d1d;
+    font-size: 17px;
+    letter-spacing: 0.425px;
+    line-height: 27.7px;
+    text-align: left;
+
+}
+
+.product-price {
+    margin-top: 6px;
+    font-size: 15.3px;
+    letter-spacing: 0.425px;
+    line-height: 22.95px;
+    text-align: left;
+}
+
+.price-origin {
+    margin-right: 5px;
+    text-decoration: line-through;
+}
+
+.product-reviews {
+    display: block;
+    min-height: 25px;
+    color: #1c1d1d;
+    font-size: 17px;
+    letter-spacing: 0.425px;
+    line-height: 27.2px;
+    text-align: left;
+}
+
+.product-colors {
+    display: flex;
+    width: 282.5px;
+}
+
+.color-swatch {
+    background-color: #fff;
+    width: 17px;
+    height: 17px;
+    display: block;
+    margin: 0 4px 4px 4px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 1px #e8e8e1;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handing Events</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      Xin chào, tôi tên là
+      <span
+        onmouseenter="showFullName()"
+        onmouseleave="showSortName()"
+        class="name"
+        >Nhi</span
+      >
+    </h1>
+
+    <button onclick="changeName()">Thay đổi tên</button>
+    <button onclick="changeColor()">Thay đổi màu</button>
+
+    //sự kiện mặc định
+    <div>
+      <a href="https://www.facebook.com/">facebook</a>
+    </div>
+
+    <div class="counter" data-min="-5" data-max="5">
+      <button class="minus">-</button>
+      <span>0</span>
+      <button class="plus">+</button>
+    </div>
+
+    <div class="counter" data-min="-10" data-max="10">
+      <button class="minus">-</button>
+      <span>0</span>
+      <button class="plus">+</button>
+    </div>
+  </body>
+</html>

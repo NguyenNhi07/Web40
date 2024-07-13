@@ -1,0 +1,77 @@
+.container {
+    gap: 20px;
+}
+
+.header-list {
+    padding: 50px;
+    gap: 15px;
+}
+
+.collection {
+    color: #888888;
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+}
+
+.project {
+    color: #001122;
+    font-family: "Inter",
+            "Inter Placeholder",
+            sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: -2.2px;
+}
+
+.img-list {
+    width: 1000px;
+    padding: 50px;
+    gap: 20px;
+}
+
+.sky-img {
+    max-width: 100%;
+}
+
+.three-img {
+    gap: 20px;
+    padding: 0;
+}
+
+.sky-img1 {
+    max-width: 100%;
+}
+
+.describe {
+    padding: 50px;
+    gap: 60px;
+}
+
+.meta {
+    gap: 20px;
+}
+
+.end-header {
+    color: #001122;
+    font-family: "Inter",
+        "Inter Placeholder",
+        sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    line-height: 36px;
+}
+
+.title-end {
+    color: #666666;
+    font-family: "Inter",
+            "Inter Placeholder",
+            sans-serif;
+    font-weight: 500;
+    line-height: 25.6px;
+    font-size: 16px;
+}

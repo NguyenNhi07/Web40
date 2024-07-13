@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter username" id="username" />
+    <input type="password" placeholder="Enter password" id="password" />
+    <button id="btn-login">Login</button>
+
+    <script>
+      const users = [
+        {
+          username: "bob",
+          password: "123",
+        },
+        {
+          username: "alice",
+          password: "456",
+        },
+      ];
+
+      function handleLogin() {
+        const usernameInput = document.querySelector("#username").value.trim();
+        const passwordInput = document.querySelector("#password").value.trim();
+
+        if (usernameInput === "" || passwordInput === "") {
+          alert("Hãy nhập tên và mật khẩu của bạn");
+          return;
+        }
+
+        const foundUser = users.find(
+          (user) =>
+            user.username === usernameInput && user.password === passwordInput
+        );
+
+        if (foundUser) {
+          alert("Đăng nhập thành công");
+        } else {
+          alert("Tài khoản hoặc mật khẩu không chính xác");
+        }
+      }
+
+      document
+        .querySelector("#btn-login")
+        .addEventListener("click", handleLogin);
+    </script>
+  </body>
+</html>

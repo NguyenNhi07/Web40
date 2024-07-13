@@ -1,0 +1,107 @@
+.box-1 {
+    /* mặc định - tất cả nội dung đều là static */
+    /* không có tác dụng gì */
+    position: static;
+}
+
+.box-2 {
+    /* cố định nội dung theo khung của trình duyệt */
+    /* nội dung sẽ được hiển thị trên một lớp cao hơn*/
+    position: fixed;
+    /* mặc định các nội dung được hiển thị trong một lớp mặc định - luồng hiển thị mặc định (từ trái sang phải, từ trên xuống dưới) */
+    /* nội dung tách ra một luồng riêng (lớp cao hơn), không còn trong luồng mặc định nữa */
+    /* sử dụng các thuộc tính : top | right | bottom | left | z-index */
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    bottom: 200px;
+}
+
+.box-4 {
+    /* cho phép dịch chuyển nội dung so với vị trí ban đầu */
+    /* không áp dụng được cả 4 thuộc tính top | right | bottom | left */
+    /* trong thực tế, relative hiếm khi dùng các thuộc tính top | right | bottom | left */
+    /* dùng để khai báo gốc cho các nội dung khác (chỉ định khác) */
+    position: relative;
+    top: 25px;
+    /* tuỳ chỉnh thứ tự mà phần tử này hiển thị, có z-index cao hơn thì hiển thị bên trên  */
+    z-index: 1;
+}
+
+.box-6 {
+    position: relative;
+    height: 200px;
+}
+
+.inner-box {
+    /* căn chỉnh nội dung theo phần tử cha gần nhất có position khác static */
+    position: absolute;
+    background-color: chocolate;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.green {
+    background-color: rgb(115, 218, 115);
+}
+
+.yellow {
+    background-color: rgb(231, 231, 173);
+}
+
+.pink {
+    background-color: pink;
+}
+
+.red {
+    background-color: lightcoral;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.puble {
+    background-color: rgb(182, 113, 182);
+}
+
+.orange {
+    background-color: rgb(253, 212, 136);
+}
+

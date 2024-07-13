@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addInput()">Add</button>
+    <input type="text" placeholder="enter something" id="inputAdd" />
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+    </ul>
+
+    <button onclick="addListItem()">Thêm ba thẻ li</button>
+    <button onclick="changColorRed()">Đổi màu thẻ li 1</button>
+    <button onclick="changeBackground()">Sửa background cho thẻ li 3</button>
+    <button onclick="removeLi4()">Remove thẻ li 4</button>
+    <button onclick="addLi4()">Thêm thẻ li 4</button>
+    <button onclick="remove()">Remote</button>
+    <button id="toggleListBtn" onclick="toggleList()">Hide</button>
+
+    <script>
+      function addListItem() {
+        const addListItem = document.querySelector("#list");
+        addListItem.insertAdjacentHTML(
+          "beforeend",
+          "<li>Item 8</li> <li>Item 9</li> <li>Item 10</li>"
+        );
+      }
+
+      function changColorRed() {
+        const changeLi = document.querySelectorAll("li");
+        changeLi.item(0).style.color = "red";
+      }
+
+      function changeBackground() {
+        const changeBackground = document.querySelectorAll("li");
+        changeBackground.item(2).style.backgroundColor = "green";
+      }
+
+      function removeLi4() {
+        const removeLi = document.querySelectorAll("li");
+        removeLi.item(3).remove();
+      }
+
+      function addLi4() {
+        const addLi = document.querySelectorAll("li");
+        addLi.item(2).insertAdjacentHTML("afterend", "<li>Hello</li>");
+      }
+
+      function addInput() {
+        const addInput = document.querySelector("#inputAdd").value.trim();
+        const addLi = document.querySelector("#list");
+        if (addInput) {
+          addLi.insertAdjacentHTML("beforeend", `<li>${addInput}</li>`);
+        }
+        addInput.value = "";
+      }
+
+      function remove() {
+        const removeLast = document.querySelector("#list");
+        const addLi = document.querySelector("#list");
+
+        if (addLi.lastElementChild) addLi.lastElementChild.remove();
+      }
+
+      function toggleList() {
+        const list = document.querySelector("#list");
+        const toggleBtn = document.querySelector("#toggleListBtn");
+        if (list.style.display === "none") {
+          list.style.display = "block";
+          toggleBtn.textContent = "Hide";
+        } else {
+          list.style.display = "none";
+          toggleBtn.textContent = "Show";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+Thêm 3 thẻ <li> có nội dung Item 8, Item 9, Item 10 vào cuối danh sách
+Sửa nội dung cho thẻ <li> 1 thành màu đỏ (color)
+Sửa background cho thẻ <li> 3 thành màu xanh (background-color)
+Remove thẻ <li> 4
+Thêm thẻ <li> mới thay thế cho thẻ <li> 4 bị xóa ở bước trước, thẻ <li> mới có nội dung bất kỳ
+Thêm 1 nút “add” + 1 ô input để nhập text. Mỗi khi bấm nút thêm 1 thẻ <li> có nội dung là nội dung trong ô input vào cuối danh sách
+Thêm 1 nút “remove”. Chức năng để xóa thẻ <li> cuối cùng của danh sách
+Thêm 1 nút “Hide” trên đầu của danh sách <ul>.
+Khi bấm vào “Hide” thì <ul> sẽ ẩn. Đồng thời label của nút “Hide” => “Show”
+Và ngược lại Khi bấm vào “Show” thì <ul> sẽ hiện. Đồng thời label của nút “Show” => “Hide”
+-->

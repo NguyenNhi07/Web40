@@ -1,0 +1,109 @@
+.dropdown {
+    /* kích thước bằng phần tử mà nó chứa, cho phép hiển thị trên 1 hàng */
+    display: inline-block;
+    position: relative;
+    background-color: pink;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    /* bằng với chiều cao của container (khớp với cạnh dưới) */
+    top: 100%;
+    left: 0;
+}
+
+/* Pseudo class : lớp giả */
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* movie */
+img {
+    max-width: 100%;
+}
+
+.movie-card {
+    width: 220px;
+    position: relative;
+}
+
+.move-card-thumbnail {
+    display: flex;
+}
+
+.movie-episode {
+    background-color: rgb(185, 231, 185);
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 0 6px 6px 0;
+}
+
+.movie-treding-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: #fff;
+    font-size: 13px;
+    padding: 3px 6px;
+}
+
+.movie-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 50px 8px 8px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, ));
+}
+
+.movie-title {
+    font-size: 16px;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #cea9d9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
